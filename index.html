@@ -11,6 +11,7 @@
     <title>Weight Convertor App</title>
     <style>
         body{ margin-top: 70px; background-color: #333; color: white;}
+        .output{visibility: hidden;}
     </style>
   </head>
   <body>
@@ -23,7 +24,7 @@
                         <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter lbs">
                     </div>
                 </form>
-                <div id="output">
+                <div class="output" id="output">
                     <div class="card bg-success mb-2">
                         <div class="card-body">
                             <h4>Kilograms</h4>  
@@ -48,8 +49,9 @@
     </div>
     <script>
         
-        var output = document.getElementById('output');
-        output.style.visibility = 'hidden';
+       var output = document.getElementById('output');
+       output.style.visibility = 'hidden'
+
         document.getElementById('lbsInput').addEventListener('input', function(e){
             let lbs = e.target.value;
             if(output.style.visibility=='hidden'){
