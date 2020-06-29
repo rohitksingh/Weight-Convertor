@@ -28,19 +28,19 @@
                 <div class="card bg-success mb-2">
                     <div class="card-body">
                         <h4>Kilograms</h4>  
-                        <div id="kgID">32</div>
+                        <div id="kgID">0</div>
                     </div>
                 </div>
                 <div class="card bg-primary mb-2">
                     <div class="card-body">
                         <h4>Grams</h4>  
-                        <div id="gramID">32</div>
+                        <div id="gramID">0</div>
                     </div>
                 </div>
                 <div class="card bg-warning mb-2">
                     <div class="card-body">
                         <h4>Ounces</h4>  
-                        <div id="ouncesID">32</div>
+                        <div id="ouncesID">0</div>
                     </div>
                 </div>
             </div>
@@ -48,8 +48,11 @@
     </div>
     <script>
         document.getElementById('lbsInput').addEventListener('input', function(e){
-            let pounds = e.target.value;
-            console.log(pounds);
+            let lbs = e.target.value;
+            document.getElementById('kgID').innerHTML = lbs*0.453592;
+            document.getElementById('gramID').innerHTML = lbs*453.5920000001679;
+            document.getElementById('ouncesID').innerHTML = lbs*15.999986948640000151;
+
         });
     </script>
     <!-- Optional JavaScript -->
