@@ -10,20 +10,42 @@
 
     <title>Weight Convertor App</title>
     <style>
-        body{ margin-top: 70px;}
+        body{ margin-top: 70px; background-color: #333; color: white;}
     </style>
   </head>
   <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <h1 class="display-4 text-center">Weight Convertor App</h1>
             </div>
-            <form>
+            <form class="col-md-12">
                 <div class="form-group">
-                    <input id="lbsInput" type="number" class="form-control-lg" placeholder="Enter pounds...">
+                    <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter pounds...">
                 </div>
             </form>
+            <div class="col-md-12" id="output">
+                <div class="card bg-success mb-2">
+                    <div class="card-body">
+                        <h4>Kilograms</h4>  
+                        <div id="kgID">32</div>
+                    </div>
+                </div>
+                <div class="card bg-primary mb-2">
+                    <div class="card-body">
+                        <h4>Grams</h4>  
+                        <div id="gramID">32</div>
+                    </div>
+                </div>
+                <div class="card bg-warning mb-2">
+                    <div class="card-body">
+                        <h4>Ounces</h4>  
+                        <div id="ouncesID">32</div>
+                    </div>
+                </div>
+
+            </div>
+            
         </div>        
     </div>
     <!-- Optional JavaScript -->
